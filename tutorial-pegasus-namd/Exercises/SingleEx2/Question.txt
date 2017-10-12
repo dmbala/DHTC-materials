@@ -1,0 +1,6 @@
+
+Under the directory "tutorial-pegasus-namd/Exercises/SingleEx2" you will see
+relevant files. In this exercise, you have to specify the correct path for the
+scratch, output and workflow directories.  All these information are included in
+the site-generator.bash and submit.bash
+

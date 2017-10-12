@@ -1,0 +1,12 @@
+universe = vanilla
+notification=never
+executable = app_script.sh
+output = logs/transfer.out.$(Process)
+error = logs/transfer.err.$(Process)
+log = logs/transfer.log
+ 
+transfer_input_files = distribution, random_words
+ShouldTransferFiles = YES
+when_to_transfer_output = ON_EXIT
+
+queue 50

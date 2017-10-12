@@ -1,0 +1,12 @@
+Universe = vanilla
+
+Executable = SDE.py
+Arguments = 0.25 500000
+
+Error = log/osg.err.$(Cluster)-$(Process)
+Output = log/osg.out.$(Cluster)-$(Process)
+Log = log/osg.log.$(Cluster)
+
+REQUIREMENTS = IS_GLIDEIN == True
+
+Queue 25

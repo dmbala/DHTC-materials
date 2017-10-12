@@ -1,0 +1,14 @@
+Universe = vanilla
+Executable = jobB1.sh
+
+transfer_input_files = B1confile, namd_jobB1.conf, ubq.pdb, ubq.psf, par_all27_prot_lipid.inp, OutFilesFromNAMD_jobB0.tar.gz
+transfer_output_files = OutFilesFromNAMD_jobB1.tar.gz
+should_transfer_files=Yes
+when_to_transfer_output = ON_EXIT
+
+
+output        = job.output.jobB1
+error         = job.error.jobB1
+log           = job.log.jobB1
+Queue 1
+

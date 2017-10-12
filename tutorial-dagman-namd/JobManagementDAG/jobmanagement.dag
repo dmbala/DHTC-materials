@@ -1,0 +1,7 @@
+######DAG file###### 
+##### Define Jobs ###
+#####  JOB JobName JobDescriptionFile
+JOB A0 run_job.submit
+JOB A1 run_job.submit
+JOB A2 run_job.submit
+JOB A3 run_job.submit

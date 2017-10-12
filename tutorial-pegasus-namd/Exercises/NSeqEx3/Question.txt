@@ -1,0 +1,9 @@
+Go to the directory  "tutorial-pegasus-namd/Exercises/NSeqEx3". All the input files related to 
+run 1000 sequential NAMD jobs are in the file "inputsN1000.tar.gz".  The input files were already 
+generated to save time. Uncompress the files by running the command "tar -xvzf inputsN1000.tar.gz" that 
+will create a directory "inputs" containing all the NAMD input files.  The dax-generator 
+python script needs to know about these 1,000 input files, include this information in the 
+dax-generator.  
+
+
+

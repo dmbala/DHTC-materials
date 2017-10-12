@@ -1,0 +1,29 @@
+# The UNIVERSE defines an execution environment for HTcondor jobs. You will almost always use VANILLA. 
+Universe = vanilla  
+# EXECUTABLE is the program your job will run It's often useful to create a shell script to "wrap" your actual work. 
+Executable = gamess_condor.sh
+
+# Send the input file along with the job
+transfer_input_files = ch2_rhf_opt.inp
+should_transfer_files=Yes
+when_to_transfer_output = ON_EXIT
+
+# Hardware requests 
+request_cpus = 1
+request_memory = 2GB
+request_disk   = 1GB
+
+# output and error -  are the error and output channels from your job that HTCondor returns from the remote host.
+output        = job.out
+error         = job.error
+
+# The log file is where HTCondor places information about your job's status, success, and resource consumption. 
+log           = job.log
+
+# Checks the distributed module is available on the remote site so that the gamess module is available on the remote site. 
+requirements = (HAS_CVMFS_oasis_opensciencegrid_org =?= TRUE)
+
+# QUEUE is the "start button" - whatever description in the above lines are send to the queue. 
+Queue 
+
+

@@ -1,0 +1,14 @@
+Universe = vanilla
+
+Executable = error101.sh
+
+# to sleep an hour
+Arguments = 3600
+
+request_memory = 2 TB
+
+Error = job.err 
+Output = job.out 
+Log = job.log 
+Queue 1 
+

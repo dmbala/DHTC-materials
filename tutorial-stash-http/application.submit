@@ -1,0 +1,15 @@
+Universe = grid
+grid_resource = batch condor dbala@login.ci-connect.uchicago.edu
+
+executable =app_script.sh
+transfer_input_files = ./distribution
+ShouldTransferFiles = YES
+when_to_transfer_output = ON_EXIT
+
+output = words.out.$(Process)
+error = words.err.$(Process)
+log = words.log
++ProjectName = "ConnectTrain"
+queue 1
+
+

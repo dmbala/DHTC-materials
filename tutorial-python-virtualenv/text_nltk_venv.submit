@@ -1,0 +1,13 @@
+Universe = vanilla
+Executable = text_nltk_venv.sh
+
+transfer_input_files = nltk_data.tar.gz, nltk_env.tar.gz, simple_text_analysis.py 
+
+output        = job.out
+error         = job.error
+log           = job.log
+
+requirements = (HAS_CVMFS_oasis_opensciencegrid_org =?= TRUE)
+Queue 1
+
+

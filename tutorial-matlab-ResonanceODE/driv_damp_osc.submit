@@ -1,0 +1,15 @@
+Universe = vanilla  
+
+Executable = driv_damp_osc.sh
+Arguments = "$(Process)"
+transfer_input_files = driv_damp_osc
+
+Output = Log/job.$(Process).out 
+Error =  Log/job.$(Process).err
+Log =    Log/job.$(Process).log
+
+requirements = requirements =  Arch == "X86_64" && HAS_MODULES == True
+
+
+queue 100
+

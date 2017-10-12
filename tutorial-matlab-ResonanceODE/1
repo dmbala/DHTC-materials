@@ -1,0 +1,37 @@
+
+Hi Alex, 
+
+Thanks for sending along the OSG userschool final assignment. Good to learn that data analysis may follow geometrical or topological 
+approach. It is interesting to see that topological data analysis (TDA) was applied to understand RNA folding. As you may know, RNA folding 
+lanscapes are much complex than protien. I find that your project is interesting and have some questions/feedbacks on your assignment. 
+
+
+
+You have mentioned that each calculation takes about 10 mins and you would like to explore a large parameter space.  Also you have already 
+tested Javaplex and Matlab on OSG connect and would like to construct DAGMan workflow. I think this is great fit for high throughput computing.
+When you say 10 minutes job, is it something for the computation of single parameter set for the whole data set or you divide the data into junks and apply the compution. 
+
+I am not sure what is the data you are targetting to run OSG connect. Is it some simulation data, experimental data or on-line web data? let us know. 
+
+
+We have matlab runtime libraries installed on OSG connect. To check, 
+
+    ssh username@login.osgconnect.net
+
+after you are in, type 
+
+   module avail 
+
+you will find that matlab runtime libraries are available. So you don't have to transfer the runtime libraries all the time along with your job. 
+
+Feel free to contact us for any questions or  need of help in setting up the calculations. 
+
+Bala
+
+
+
+
+
+
+
+

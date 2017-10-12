@@ -1,0 +1,13 @@
+universe = vanilla
+ 
+Executable = R-wrapper.sh
+arguments = mcpi.R
+transfer_input_files = mcpi.R 
+
+log = mcpi.log.$(Cluster).$(Process)
+error = mcpi.err.$(Cluster).$(Process)
+output = mcpi.out.$(Cluster).$(Process)
+
+requirements = OSGVO_OS_STRING == "RHEL 6" && Arch == "X86_64" && HAS_MODULES == True
+queue 10
+

@@ -1,0 +1,12 @@
+Universe = vanilla
+
+Executable = short.sh
+Arguments = 5 # to sleep 5 seconds
+
+Error = log/campus.err.$(Cluster)-$(Process)
+Output = log/campus.out.$(Cluster)-$(Process)
+Log = log/campus.log.$(Cluster)
+
+Requirements = (regexp("^uc*", TARGET.Machine, "IM") == True)
+
+Queue 25

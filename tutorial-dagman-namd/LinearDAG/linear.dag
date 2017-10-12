@@ -1,0 +1,11 @@
+######DAG file###### 
+##### Define Jobs ###
+#####  JOB JobName JobDescriptionFile
+Job A0 namd_run_job0.submit
+Job A1 namd_run_job1.submit
+Job A2 namd_run_job2.submit
+Job A3 namd_run_job3.submit
+PARENT A0 CHILD A1
+PARENT A1 CHILD A2
+PARENT A2 CHILD A3
+

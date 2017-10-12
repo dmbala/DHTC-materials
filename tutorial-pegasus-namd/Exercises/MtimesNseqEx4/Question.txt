@@ -1,0 +1,8 @@
+Go to the directory  "tutorial-pegasus-namd/Exercises/MtimesNseqEx4". All the input files related to 
+run 1000 sequential NAMD jobs are in the file "inputsM1000N50.tar.gz".  The input files were already 
+generated to save time. Uncompress the files by running the command "tar -xvzf inputsM1000N50.tar.gz" that 
+will create a directory "inputs" containing all the NAMD input files. The input files represent 
+1000-parallel, each of  50-sequential NAMD jobs. Include this information in the dax-generator.  
+
+
+

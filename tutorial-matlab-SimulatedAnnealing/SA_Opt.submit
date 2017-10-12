@@ -1,0 +1,25 @@
+Universe = vanilla  
+
+# These are good base requirements for your jobs on OSG. It is specific on OS and
+# OS version, core count and memory, and wants to use the software modules. 
+Requirements = OSGVO_OS_STRING == "RHEL 6" && Arch == "X86_64" &&  HAS_MODULES == True
+request_cpus = 1
+request_memory = 1 GB
+
+Executable = SA_Opt.sh
+Arguments = $(Process)
+
+transfer_input_files =  SA_Opt
+
+Output = Log/job.$(Process).out 
+Error =  Log/job.$(Process).err
+Log =    Log/job.$(Process).log
+
+# Send the job to Held state on failure. 
+on_exit_hold = (ExitBySignal == True) || (ExitCode != 0)
+
+# Periodically retry the jobs every 1 hour, up to a maximum of 5 retries.
+periodic_release =  (NumJobStarts < 5) && ((CurrentTime - EnteredCurrentStatus) > 60)
+
+queue 10
+

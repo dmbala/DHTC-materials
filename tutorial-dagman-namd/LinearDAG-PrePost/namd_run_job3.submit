@@ -1,0 +1,15 @@
+Universe = vanilla
+Executable = namd_run_job3.sh
+
+transfer_input_files = ubq_gbis_eq_job3.conf, ubq.pdb, ubq.psf, par_all27_prot_lipid.inp, OutFilesFromNAMD_job2.tar.gz
+should_transfer_files=Yes
+transfer_output_files = OutFilesFromNAMD_job3.tar.gz
+when_to_transfer_output = ON_EXIT
+
+output        = job.output.job3 
+error         = job.error.job3
+log           = job.log.job3
+
+requirements = (HAS_CVMFS_oasis_opensciencegrid_org =?= TRUE)
+Queue 1
+

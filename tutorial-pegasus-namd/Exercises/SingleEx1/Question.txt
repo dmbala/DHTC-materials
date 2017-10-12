@@ -1,0 +1,10 @@
+
+Under the directory "tutorial-pegasus-namd/Exercises/SingleEx1" you will see relevant files to run 
+the single NAMD job with pegasus. However, you need to change few things to run submit the 
+job. The errors are associated with the definition of names of dax-generator and NAMD input files. 
+You have to correct these two file names in the submit submit.bash and in 
+the dax-generator script. 
+
+Hint:
+grep dax-generator-singleJob-Ex1.py *
+grep ubq_gbis_eq_Ex1.conf *

@@ -1,0 +1,45 @@
+1. Multiple scattering method applied to volume rendering
+Paul Kilgo
+pkilgo@clemson.edu
+Computer Science
+Clemson University
+(Path sampling for image analysis. Paul already built DAGMan workflow and was successful in running jobs. The jobs 
+are based on Python + DAGMan )
+
+2. Using OSG to Estimate Demand of Differentiated Products 
+Prof. Fernando Luco
+Texas A&M University
+(Search problem in Economics model. Already build the workflow with Pegasus and compiled MATLAB applications.  Hope 
+to  run the jobs soon. )
+
+3. Online Application of Atlas-based Image Segmentation in Imaging-guided Radiotherapy via HTC
+Tingting Zhao
+Department of Radiation Oncology, University of California, Los Angeles
+(Image analysis with elastix package. The proposed work is an excellent fit for HTC ) 
+
+4. Topological data analysis to understand the structure of high dimensional data 
+Alex  Georges
+Physics/Mathematics
+University  of  California, San Diego
+(Interesting idea and could be applied to any data.)
+
+5. Biocontrol, Wasps, and Big Data
+Kelley Leung
+PhD researcher
+Breeding Invertebrates for Next Generation Biocontrol (BINGO)
+Marie-Curie Innovative Training Network
+Groningen Institute for Evolutionary Life Sciences
+University of Groningen
+(Interesting work and the proposed data analysis and modeling with R would be a great fit on OSG Connect)
+
+
+6. Use of high-throughput computing to predict the effect of size inhomogeneity in terahertz quantum dot cascade lasers
+Ben Burnett
+Department of Electrical Engineering, UCLA 
+(Modeling quantum dots for lasers. The approach and calculations would be easy to start on OSG Connect with 
+MATLAB + DAGMan workflow) 
+
+
+
+
+

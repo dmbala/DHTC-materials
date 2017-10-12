@@ -1,0 +1,15 @@
+Universe = vanilla  
+
+Executable =  wigner_distribution.sh
+Arguments = 500 $(Process)
+transfer_input_files = wigner_distribution
+
+Output = Log/job.$(Process).out 
+Error =  Log/job.$(Process).err
+Log =    Log/job.$(Process).log
+
+requirements =  Arch == "X86_64" && HAS_MODULES == True
+
+
+queue 100
+

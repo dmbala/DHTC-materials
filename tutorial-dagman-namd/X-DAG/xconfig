@@ -1,0 +1,10 @@
+ ######DAG file######  
+Job A0 jobA0.submit
+Job B0 jobB0.submit
+Job X jobX.submit
+Job B1 jobB1.submit
+Job A1 jobA1.submit
+PARENT A0 B0 CHILD X
+PARENT X CHILD A1 B1 
+
+

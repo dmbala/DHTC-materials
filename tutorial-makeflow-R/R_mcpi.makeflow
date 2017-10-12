@@ -1,0 +1,11 @@
+BATCH_OPTIONS = requirements = CVMFS_oasis_opensciencegrid_org_REVISION >= 5428
+
+mcpi.1.out: Scripts 
+    Scripts/R_mcpi_wrapper.sh Scripts/mcpi.R > mcpi.1.out
+
+mcpi.2.out: Scripts
+    Scripts/R_mcpi_wrapper.sh Scripts/mcpi.R > mcpi.2.out
+
+average_mcpi.out: Scripts mcpi.1.out mcpi.2.out
+  LOCAL  Scripts/mcpi_ave.bash > average_mcpi.out; mkdir -p Output; mv mcpi*.out Output/.
+

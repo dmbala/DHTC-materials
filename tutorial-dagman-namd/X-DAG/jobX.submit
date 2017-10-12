@@ -1,0 +1,13 @@
+Universe = vanilla
+Executable = jobX.sh
+
+transfer_input_files = namd_jobA1.conf, namd_jobB1.conf, OutFilesFromNAMD_jobA0.tar.gz, OutFilesFromNAMD_jobB0.tar.gz
+transfer_output_files = A1confile, B1confile, Exhange.out
+should_transfer_files=Yes
+when_to_transfer_output = ON_EXIT
+
+output        = job.out.jobX
+error         = job.error.jobX
+log           = job.log.jobX
+Queue 1
+

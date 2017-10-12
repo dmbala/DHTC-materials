@@ -1,0 +1,12 @@
+universe = vanilla
+
+output = job.out.$(Process)
+error = job.error.$(Process)
+log = job.log.$(Process)
+
+executable = cp2k.sh
+
+transfer_input_files = cs_cell_opt_direct_lbfgs.inp
+requirements = (HAS_CVMFS_oasis_opensciencegrid_org =?= TRUE)
+
+queue 1

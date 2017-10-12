@@ -1,0 +1,21 @@
+
+# Add additional condor expressions
+BATCH_OPTIONS = requirements = CVMFS_oasis_opensciencegrid_org_REVISION >= 5428
+
+
+# Rule 1. Outputfile = 1cta_nvt_mdrun1.cpt, Inputfile = 1cta_nvt.tpr (Executables from OASIS) 
+1cta_nvt_mdrun1.cpt: 1cta_nvt.tpr
+    module load gromacs/5.0.5; gmx mdrun -ntmpi 1 -ntomp 1 -nt 1 -s 1cta_nvt.tpr -deffnm 1cta_nvt_mdrun1 -nsteps 100
+
+# Rule 2. Outputfile = 1cta_nvt_mdrun2.cpt, Inputfiles = 1cta_nvt.tpr and 1cta_nvt_mdrun1.cpt (Executables from OASIS)
+1cta_nvt_mdrun2.cpt: 1cta_nvt.tpr 1cta_nvt_mdrun1.cpt
+    module load gromacs/5.0.5; gmx mdrun -ntmpi 1 -ntomp 1 -nt 1 -s 1cta_nvt.tpr -deffnm 1cta_nvt_mdrun2 -nsteps 100
+
+# Rule 3. Outputfile = 1cta_nvt_mdrun3.cpt, Inputfiles = 1cta_nvt.tpr and 1cta_nvt_mdrun2.cpt (Executables from OASIS)
+1cta_nvt_mdrun3.cpt: 1cta_nvt.tpr 1cta_nvt_mdrun2.cpt
+    module load gromacs/5.0.5; gmx mdrun -ntmpi 1 -ntomp 1 -nt 1 -s 1cta_nvt.tpr -deffnm 1cta_nvt_mdrun3 -nsteps 100
+
+# Rule 4. Runs locally. Collects all the output files under the directory Output. 
+list_of_output_files.txt: 1cta_nvt_mdrun1.cpt 1cta_nvt_mdrun2.cpt 1cta_nvt_mdrun3.cpt 
+  LOCAL  mkdir -p Output; mv *.edr Output/.; mv *.gro Output/. ; mv *.log Output/.; mv *.trr Output/; ls Output > list_of_output_files.txt
+
